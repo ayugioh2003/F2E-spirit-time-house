@@ -1,0 +1,155 @@
+/* 整體 */
+
+.wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #E1E1E1 100%;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 局部 */
+
+/* .topbar */
+
+.header {
+  background: #4A90E2 ;
+  padding-bottom: 4px;
+  margin-bottom: 22px;
+}
+
+.topbar {
+  box-sizing: border-box;
+  max-width: 500px; /* 寬度要比 .header 小，才有辦法置中 */
+  height: 76px;
+  display: block;
+  margin: 0 auto;
+}
+.topbar li {
+  box-sizing: border-box;
+  float: left;
+  width: 33.33333%;
+  text-align: center;
+  border-bottom: 4px solid #4A90E2;
+}
+.topbar li:hover {
+  border-bottom: 4px solid #00408B;
+  color: #ffffff;
+}
+
+.topbar a {
+  display: block; /* 讓整個按鈕範圍被 hover 時都有效果 */
+  line-height: 76px;
+  text-decoration: none;
+  color: #00408B;
+}
+.topbar a:hover {
+  color: #ffffff;
+}
+
+/* addtodo 添加 todo 區 */
+
+.addtodo {
+  background: #F2F2F2;
+  box-shadow: 0 4px 4px 0 #C8C8C8;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.addtodo-simple {
+  background: #F2F2F2;
+  border-radius: 5px 5px 0 0; 
+  height: 76px;
+  padding: 0 50px;
+  border-bottom: 5px solid #E1E1E1;
+}
+.addtodo-simple input {
+  background: #F2F2F2;
+  line-height: 76px;
+  width: auto;
+  height: 70px;
+  border: 0;
+  font-size: 32px;
+}
+
+
+
+.addtodo-complicate {
+  background: #F2F2F2;
+  margin: 0 50px;
+
+}
+.addtodo-complicate p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.addtodo-complicate textarea{
+  box-sizing: border-box;
+  width: 400px;
+  padding: 20px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.addtodo button {
+  width: 50%;
+}
+
+
+/* todolist 清單區塊 */
+
+.todolist li:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+
+.todolist li {
+  background: #F2F2F2;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.checkbox {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  margin-right: 10px;
+  padding: 10px;
+}
+.checkbox:hover {
+  background: pink;
+}
+
+.todoname {
+  float: left;
+  padding: 10px;
+}
+
+
+.option {
+  float: right;
+}
+.option a {
+  float: left;
+  color: black;
+  padding: 10px;
+
+}
+.star {
+  float: left;
+}
+
+.edit {
+  float: left;
+}

@@ -9,21 +9,100 @@
   <!-- <meta name="description" content=""> -->
 
   <link rel="stylesheet" href="css/cssreset.css">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/all.js"></script>
 </head>
 
 <body>
+
+  <div class="header">
+    <ul class="topbar clearfix">
+      <li>
+        <a href="#">My Tasks</a>
+      </li>
+      <li>
+        <a href="#">In Progress</a>
+      </li>
+      <li>
+        <a href="#">Completed</a>
+      </li>
+    </ul>
+  </div>
+
   <div class="wrap">
-    <div class="header"></div>
-      <ul class="topbar">
-        <li><a href="#">My Tasks</a></li>
-        <li><a href="#"></a>In Progress</li>
-        <li><a href="#">Completed</a></li>
-      </ul>
     <div class="content"></div>
+    <div class="addtodo">
+      <div class="addtodo-simple">
+        <input type="text" placeholder="Type Something Here">
+      </div>
+      <div class="addtodo-complicate">
+        <p>Comment</p>
+        <textarea name="comment" id="" rows="10" placeholder="momo here"></textarea>
+      </div>
+      <div>
+
+      </div>
+      <div class="pure-button-group" role="group" aria-label="...">
+        <button class="pure-button">Cancel</button>
+        <button class="pure-button pure-button-primary">Add Task</button>
+      </div>
+
+    </div>
+    <ul class="todolist">
+      <li>
+        <div class="checkbox"></div>
+        <div class="todoname">Type Something Here ...</div>
+        <div class="option">
+          <div class="star">
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+          </div>
+          <div class="edit">
+            <a href="#">
+              <i class="fas fa-edit"></i>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <div class="todoname">Type Something Here ...</div>
+        <div class="option">
+          <div class="star">
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+          </div>
+          <div class="edit">
+            <a href="#">
+              <i class="fas fa-edit"></i>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <div class="todoname">Type Something Here ...</div>
+        <div class="option">
+          <div class="star">
+            <a href="#">
+              <i class="fas fa-star"></i>
+            </a>
+          </div>
+          <div class="edit">
+            <a href="#">
+              <i class="fas fa-edit"></i>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
     <div class="footer"></div>
   </div>
 
