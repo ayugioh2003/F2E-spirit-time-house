@@ -83,6 +83,7 @@ html {
 
 
 .addtodo-complicate {
+  display: none;
   background: #F2F2F2;
   margin: 0 50px;
 
@@ -130,10 +131,17 @@ html {
 .checkbox:hover {
   background: pink;
 }
+.checkbox.complete {
+  background: lightgray;
+}
 
 .todoname {
   float: left;
   padding: 10px;
+}
+.todoname.complete {
+  text-decoration: line-through;
+  color: gray;
 }
 
 
@@ -146,6 +154,10 @@ html {
   padding: 10px;
 
 }
+.option a:hover {
+  color: pink;
+}
+
 .star {
   float: left;
 }
