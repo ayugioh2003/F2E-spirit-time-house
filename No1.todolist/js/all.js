@@ -20,6 +20,12 @@ $(document).ready(function () {
     $(this).siblings('.todoname').toggleClass('complete');
   });
 
+  // star
+  $('.star').click(function (e) { 
+    e.preventDefault();
+    $(this).toggleClass('stared');
+  });
+
 
 
 });

@@ -161,6 +161,10 @@ html {
 .star {
   float: left;
 }
+.star.stared a {
+  color: orange;
+}
+
 
 .edit {
   float: left;
