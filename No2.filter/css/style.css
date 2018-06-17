@@ -1,13 +1,22 @@
-/* ¾ãÅé */
+/* ï¿½ï¿½ï¿½ï¿½ */
 
-.wrap {
-  max-width: 500px;
-  margin: 0 auto;
+:root {
+  --wrap-width: 900px;
+  --main-color: #7828B4;
 }
 
 html {
   scroll-behavior: smooth;
+  background: #F2F2F2 ;
 }
+
+.wrap {
+  max-width: var(--wrap-width);
+  margin: 0 auto;
+  
+}
+
+
 
 .clearfix {
   content: "";
@@ -15,4 +24,188 @@ html {
   clear: both;
 }
 
-/* §½³¡ */
+/* ï¿½ï¿½ï¿½ï¿½ */
+
+/* 1. header logo, search */
+
+.header { 
+  box-sizing: border-box;
+  background: var(--main-color);
+  width: var(--wrap-width);
+  height: 92px;
+}
+
+.header .logo {
+  float: left;
+}
+.header .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 30px;
+  font-size: 36px;
+  line-height: 92px;
+  font-family: Optima-ExtraBlack;
+}
+
+.header .search {
+  float: left;
+  margin-left: 200px;
+  border-bottom: 1px solid rgba(255,255,255,0.90);
+}
+.header .search i {
+  color:  rgba(255,255,255,0.90);
+}
+.header .search input{
+  background: var(--main-color);
+  margin-left: 10px;
+  border: 0px;
+  font-size: 20px;
+  color: rgba(255,255,255,0.50);  
+  padding-right: 70px;
+  padding-top: 35px;
+}
+
+
+/* 2. content > .aside + .article */
+/* 2.1 aside > Location + Date + Categories  */
+
+
+.content {
+  float: left;
+  width: 900px;
+  margin-bottom: 50px;
+}
+
+.aside {
+  box-sizing: border-box;
+  float: left;
+  background: #EBEBEB;
+  width: 300px;
+  margin-left: 38px;
+}
+.aside label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.aside > div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.aside > div:not(:last-of-type) {
+  border-bottom: 1px gray solid;
+}
+
+
+.aside .Location {
+  float: left;
+  box-sizing: border-box;
+  width: 240px;
+  margin: 0 30px;
+}
+
+
+.aside .Date {
+  float: left;
+  box-sizing: border-box;
+  width: 240px;
+  margin: 0 30px;
+}
+
+
+.aside .Categories {
+  float: left;
+  box-sizing: border-box;
+  width: 240px;
+  margin: 0 30px;
+}
+
+
+/* 2.2 .article > .filter + filtered-data */
+
+.article {
+  float: left;
+  margin-left: 30px;
+  width: 500px;
+  
+}
+
+.article .filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.filtered-data li {
+  margin-bottom: 20px;
+}
+.filtered-data li:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.filtered-data li img {
+  float: left;
+  margin-right: 10px;
+}
+.filtered-data li h2 {
+  font-size: 24px;
+  color: #9013FE;
+  line-height: 36px;  
+}
+.filtered-data li p {
+  font-family: Roboto-Regular;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 20px 0;
+}
+
+.filtered-data .data-meta {
+  float: left;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.filtered-data .data-meta .author-data {
+  float: left;
+  font-weight: bolder;
+}
+.filtered-data .data-meta .categories-date {
+  float: left;
+  background: #D7D7D7;
+  margin-left: 60px;
+  outline: 5px solid #D7D7D7;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+.filtered-data .location-date-data {
+  float: left;
+}
+.filtered-data .location-date-data .date-data {
+  margin-left: 20px;
+}
+
+
+/* footer > .pages*/
+
+.footer {
+  float: right;
+  margin-bottom: 50px;
+}
+
+.pages li {
+  float: left;
+}
+.pages li a {
+  display: block;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #ECEEEF;
+  text-decoration: none;
+}
+.pages li a:hover {
+  background: #9013FE;
+  border: 1px solid #9013FE;
+  color: white;
+}

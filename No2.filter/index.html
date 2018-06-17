@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,8 @@
   <!-- <meta name="description" content=""> -->
 
   <link rel="stylesheet" href="css/cssreset.css">
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
   <!-- <link rel="stylesheet" href="css/animate.css"> -->
   <link rel="stylesheet" href="css/style.css">
@@ -19,11 +20,142 @@
 
 <body>
   <div class="wrap">
-    <div class="header"></div>
-    <div class="content"></div>
-    <div class="footer"></div>
-  </div>
 
+    <!-- 1. header > logo + search -->
+    <div class="header clearfix">
+      <div class="logo">
+        <a href="#">HaveFun</a>
+      </div>
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Explorer your own activities">
+      </div>
+    </div>
+
+
+
+    <!-- 2. content > .aside + .article  -->
+    <div class="content clearfix">
+
+      <!-- 2.1 aside > Location + Date + Categories  -->
+      <div class="aside clearfix">
+        <div class="Location">
+          <label for="Location">Location</label>
+          <select name="Location" id="Location">
+            <option value="taiwan">taiwan</option>
+            <option value="japan">japan</option>
+          </select>
+        </div>
+        <div class="Date">
+          <label for="Date">Date</label>
+          <label for="date-from">from</label>
+          <input type="text" name="date-from" id="date-from">
+          <label for="date-to">to</label>
+          <input type="text" name="date-to" id="date-to">
+        </div>
+        <div class="Categories">
+          <label for="Categories">Categories</label>
+          <input type="checkbox" value="All" name="Categories"> All
+          <br>
+          <input type="checkbox" value="Entertainment" name="Categories"> Entertainment
+          <br>
+          <input type="checkbox" value="Food" name="Categories"> Food
+          <br>
+          <input type="checkbox" value="Learning" name="Categories"> Learning
+          <br>
+          <input type="checkbox" value="Outdoors" name="Categories"> Outdoors
+        </div>
+      </div>
+
+      <!-- 2.2 .article > .filter + filtered-data -->
+
+      <div class="article">
+        <div class="filter">
+          <p>Showing 3 results by ...</p>
+        </div>
+        <ul class="filtered-data">
+          <li>
+            <img src="https://fakeimg.pl/200x200/#993333">
+            <h2>東京一日遊</h2>
+            <p>東京真的很好玩呢。今天啊，我到了 ...</p>
+            <div class="data-meta">
+              <div class="author-data">阿明</div>
+              <div class="categories-date">Outdoors</div>
+            </div>
+            <div class="location-date-data">
+              <span class="location-data">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Taiwan</span>
+              <span class="date-data">
+                  <i class="far fa-calendar-alt"></i>
+                  2018-06-17-星期日</span>
+            </div>
+          </li>
+          <li>
+              <img src="https://fakeimg.pl/200x200/#993333">
+              <h2>東京一日遊</h2>
+              <p>東京真的很好玩呢。今天啊，我到了 ...</p>
+              <div class="data-meta">
+                <div class="author-data">阿明</div>
+                <div class="categories-date">Outdoors</div>
+              </div>
+              <div class="location-date-data">
+                <span class="location-data">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Taiwan</span>
+                <span class="date-data">
+                    <i class="far fa-calendar-alt"></i>
+                    2018-06-17-星期日</span>
+              </div>
+            </li>
+            <li>
+                <img src="https://fakeimg.pl/200x200/#993333">
+                <h2>東京一日遊</h2>
+                <p>東京真的很好玩呢。今天啊，我到了 ...</p>
+                <div class="data-meta">
+                  <div class="author-data">阿明</div>
+                  <div class="categories-date">Outdoors</div>
+                </div>
+                <div class="location-date-data">
+                  <span class="location-data">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Taiwan</span>
+                  <span class="date-data">
+                      <i class="far fa-calendar-alt"></i>
+                      2018-06-17-星期日</span>
+                </div>
+              </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer clearfix">
+      <ul class="pages">
+        <li>
+          <a href="#">←</a>
+        </li>
+        <li>
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#">→</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </body>
 
 </html>

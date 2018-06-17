@@ -2,14 +2,13 @@
 
 
 
-![](http://via.placeholder.com/600x150?text=This+is+banner )
+![](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/34879368_1942703255749310_4880586048154894336_n.jpg?_nc_cat=0&oh=8f0bd340e7358fee306aca3ce719a3ad&oe=5BB30D04)
 
 
 
 ## 網站介紹
 
-(這網站的用途是什麼)
-
+* [前端修煉 - 精神時光屋の賽況整理 - HackMD](https://hackmd.io/N7iClZmXQAy2QwRMzQx3dg?view) 
 
 
 ## 網站目標
@@ -19,16 +18,8 @@
 ## 更新
 
 
+2018-06-17-星期日
 
-
-
-複製整個資料夾的語法
-
-* [xcopy - 檔案. 資料夾複製指令 @ 藍影 :: 痞客邦 ::](http://edisonshih.pixnet.net/blog/post/28109815-xcopy---%E6%AA%94%E6%A1%88.%E8%B3%87%E6%96%99%E5%A4%BE%E8%A4%87%E8%A3%BD%E6%8C%87%E4%BB%A4)
-* 參數S，代表連當前目錄底下的資料夾也複製
-* 參數改成E，就是空目錄也會複製
-
-```bash
-xcopy "A資料夾路徑" "B資料夾路徑" /S
-```
-
+* [八、表格與表單設計技巧 · html-css-learning](https://ayugioh2003.gitbooks.io/html-css-learning/content/ba-3001-biao-ge-yu-biao-dan-she-ji-ji-qiao.html)
+* [SASS, LESS 退散，原生 CSS 可以使用變數啦！ « MUKI space*](http://muki.tw/tech/native-css-variables/)
+* [CSS Outline Properties](https://www.w3schools.com/Css/css_outline.asp)
