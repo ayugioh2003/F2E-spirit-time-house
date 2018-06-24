@@ -4,7 +4,7 @@
 
 ![](http://via.placeholder.com/600x150?text=This+is+banner )
 
-
+* [Document](https://ayugioh2003.github.io/F2E-spirit-time-house/No3.admin-order/)
 
 ## 網站介紹
 
