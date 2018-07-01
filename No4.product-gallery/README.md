@@ -24,4 +24,5 @@
 * [旋轉、傾斜、縮放的變形效果 transform (CSS properties) [2*] @ 網頁藝術思考 - CSS 網頁設計藝術, 友善的無障礙網頁 :: 痞客邦 ::](http://boohover.pixnet.net/blog/post/35341387-%E6%97%8B%E8%BD%89%E3%80%81%E5%82%BE%E6%96%9C%E3%80%81%E7%B8%AE%E6%94%BE%E7%9A%84%E8%AE%8A%E5%BD%A2%E6%95%88%E6%9E%9C-transform-%28css-prope)
 * [CSS z-index 屬性](http://www.w3school.com.cn/cssref/pr_pos_z-index.asp)
 * [CSS3 漸層背景 (background linear gradient) 實作練習 & Yijen's blog - hanasan # 天空部落 TIAN #](https://hanasan.tian.yam.com/posts/66887138)
+    * https://youtu.be/PFPAHcBNHY8?t=1h27m48s
 * [CSS3 Background-size_background-size, css3 屬性詳解 教程_w3cplus](https://www.w3cplus.com/content/css3-background-size)
