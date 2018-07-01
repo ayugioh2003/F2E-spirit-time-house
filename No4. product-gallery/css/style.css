@@ -1,0 +1,148 @@
+/* 整體 */
+
+:root {
+  --green: #50E3C2 ;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+p, h1, div {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* 局部 */
+
+/* repeatable component */
+
+.list {
+  position: relative;
+}
+
+/* maj-title */
+.list .maj-title {
+  position: absolute;
+  font-size: 48px;
+}
+.list .maj-title::after {
+  content: attr(data-title);
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  z-index: -1;
+  transform: translate(2px);
+  color: rgba(0,0,0,0.30);
+
+}
+.list .maj-title::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  z-index: -2;
+  transform: translate(2px);
+  color: rgba(0,0,0,0.10);
+}
+/* sub-title */
+.list .sub-title {
+  font-size: 24px;
+  font-style: italic;
+  position: absolute;
+}
+
+
+.list .number {
+  font-size: 48px;
+}
+
+.list .bordered {
+  box-sizing: border-box;
+  width: 240px;
+  height: 200px;
+  border: 20px solid #50E3C2;
+  position: absolute;
+}
+
+.list .nihong {
+  width: 240px;
+  height: 100px;
+  background-image: linear-gradient(135deg, 
+    var(--green) 0px, 
+    var(--green) 20px,
+
+    transparent 20px,
+    transparent 40px,
+
+    var(--green) 40px,
+    var(--green) 60px,
+
+    transparent 60px,
+    transparent 80px
+    );
+    background-size: 57px 57px;
+    position: absolute;
+}
+
+
+/* header */
+
+.header p, .header h1 {
+  text-align: center;
+}
+.header p {
+  margin-bottom: 5px;
+}
+.header p span {
+  padding: 1px 3px;
+  color: #FFFFFF;
+  background: #000000;
+}
+.header h1 {
+  font-size: 72px;
+  margin-bottom: 100px;
+}
+
+/* list1 */
+
+.list1 .imgblock img {
+  width: 480px;
+  height: 400px;
+}
+
+.list1 .maj-title {
+  top: -15px;
+  left: 0;
+}
+.list1 .sub-title {
+  top: 0;
+  left: 0;
+  transform: rotate(-270deg) translate(350px , -430px)
+  
+}
+
+.list1 .bordered {
+  top: -60px;
+  left: 0;
+  transform: translate(300px);
+  z-index: -1;
+}
+
+.list .nihong {
+  bottom: 0;
+  left: 60px;
+}
