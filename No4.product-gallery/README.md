@@ -3,7 +3,7 @@
 
 
 ![](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/36137523_1963231287029840_5164810645748580352_n.jpg?_nc_cat=0&oh=ca6b87cee438279d118f310861bf990d&oe=5BB265B5)
-* [網頁樣板](https://ayugioh2003.github.io/F2E-spirit-time-house/No4.product-gallery/)
+* [No4.product-gallery](https://ayugioh2003.github.io/F2E-spirit-time-house/No4.product-gallery/)
 * [F2E-spirit-time-house/No4.product-gallery at master · ayugioh2003/F2E-spirit-time-house](https://github.com/ayugioh2003/F2E-spirit-time-house/tree/master/No4.product-gallery)
 
 ## 網站介紹
