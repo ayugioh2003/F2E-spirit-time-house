@@ -28,6 +28,7 @@ b {
 /* 1 img */
 .comic-img {
   float: left;
+  margin-bottom: 50px;
 }
 
 /* 2 comic-text */
@@ -60,8 +61,7 @@ b {
 /* 3 all-chapter */
 
 .all-chapter {
-  margin-top: 40px;
-  float: left;
+  display: block;
   position: relative;
   box-sizing: border-box;
   border: 2px solid #000;
