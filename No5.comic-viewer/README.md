@@ -2,9 +2,9 @@
 
 
 
-![](http://via.placeholder.com/600x150?text=This+is+banner )
+![](https://scontent-tpe1-1.xx.fbcdn.net/v/l/t1.0-9/36553180_1974435399242762_6591443217764319232_n.jpg?_nc_cat=0&_nc_eui2=AeGw-foU96GwgJNSktZ2Qynd_SBW_Ed8EZ--RcIUpAFQ0bKVQI8rg_GHHIg-lR2MiCI3Obz-OYgjXD370GaNeX_RTYI7dY1GZAll2-4kTpr3aA&oh=39a026cb87c3b654af98dbec14a9cd27&oe=5BE1D3F9)
 
-* [Document](https://ayugioh2003.github.io/F2E-spirit-time-house/No3.admin-order/)
+* [網頁樣板](https://ayugioh2003.github.io/F2E-spirit-time-house/No5.comic-viewer/)
 
 ## 網站介紹
 
@@ -19,16 +19,4 @@
 ## 更新
 
 
-
-
-
-複製整個資料夾的語法
-
-* [xcopy - 檔案. 資料夾複製指令 @ 藍影 :: 痞客邦 ::](http://edisonshih.pixnet.net/blog/post/28109815-xcopy---%E6%AA%94%E6%A1%88.%E8%B3%87%E6%96%99%E5%A4%BE%E8%A4%87%E8%A3%BD%E6%8C%87%E4%BB%A4)
-* 參數S，代表連當前目錄底下的資料夾也複製
-* 參數改成E，就是空目錄也會複製
-
-```bash
-xcopy "A資料夾路徑" "B資料夾路徑" /S
-```
 
