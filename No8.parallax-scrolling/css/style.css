@@ -1,0 +1,18 @@
+/* 整體 */
+
+.wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 局部 */
