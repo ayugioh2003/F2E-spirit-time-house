@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>遊戲技能樹</title>
 
-  <link rel="stylesheet" href="css/cssreset.css">
+  <!-- <link rel="stylesheet" href="css/cssreset.css"> -->
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
   <!-- <link rel="stylesheet" href="css/animate.css"> -->
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/all.js"></script>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <script src="js/all.js"></script> -->
 
   <script>
 
@@ -21,7 +21,7 @@
       }
     }
 
-    // 核心操作功能
+    // ----- 一、核心操作功能 -----
     app.get = function(selector){
       return document.querySelector(selector);
     }
@@ -35,7 +35,8 @@
       return obj;
     }
     app.createSvgElement = function(tagName, atrs, parentElement){
-      let obj = document.createElementNS("https://www.w3.org/2000/svg", tagName);
+      // 網址加個 https 就失效了，我除 bug 除了快半小時。哭
+      let obj = document.createElementNS("http://www.w3.org/2000/svg", tagName);
       for (let name in atrs){
         obj.setAttribute(name, atrs[name]);
       }
@@ -68,7 +69,7 @@
       return obj;
     }
 
-    // 主流程
+    // ----- 二、主流程 -----
     app.init = function() {
       // 初始化狀態，把 lib 轉成區域變數，方便引用
       let Skill = app.lib.Skill;
@@ -87,11 +88,11 @@
         // step 3
         "s_3_0": new Skill(3, 0, "Skill-0-0", ["s_2_1"]),
         "s_3_1": new Skill(3, 1, "Skill-0-0", ["s_2_0", "s_2_1"]),
-        "s_3_2": new Skill(3, 2, "Skill-0-0", ["s_2_1"]),
+        "s_3_2": new Skill(3, 2, "Skill-0-0", ["s_2_1"])
       }
       // 把字串轉成真正的物件
       for (let key in app.state.skills){
-        app.state.skills[key].preSkills = app.state.skills[key].map(function(key){
+        app.state.skills[key].preSkills = app.state.skills[key].preSkills.map(function(key){
           return app.state.skills[key];
         })
       }
@@ -99,14 +100,26 @@
       app.render();
     }
 
-    // 渲染畫面
+    // ----- 三、渲染畫面 -----
     app.render = function() {
-
+      let skills = app.state.skills;
+      let stepDistance = 250;
+      let ground = app.get("#ground")
+      for (let key in skills){
+        let skill = skills[key];
+        // 建立技能的圓圈圈畫面
+        // tagName, atrs, parentElement
+        let x = stepDistance * (skill.step+0.5)
+        app.createSvgElement("circle", {
+          "cx":x, "cy":100, "r":50, "fill":"#ddeeff", "stroke":"#8899aa"
+        }, ground);
+      }
     }
-    // 程式進入點
+
+    // ----- 四、程式進入點 -----
     window.addEventListener("load", app.init)
 
-    // 自訂類別庫
+    // ----- 五、自訂類別庫 -----
     app.lib.Skill = class {
       constructor(step, count, name, preSkills){
         this.step = step; // 整棵樹中的主階段
@@ -122,8 +135,7 @@
 
 <body style="text-align:center;">
   <h1>系統化的完成技能樹功能</h1>
-  <svg width="1000" height:"500" id="ground"></svg>
-
+  <svg width="1000" height="500" id="ground"></svg>
 </body>
 
 </html>
