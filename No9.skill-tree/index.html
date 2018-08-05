@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>遊戲技能樹</title>
+
+  <link rel="stylesheet" href="css/cssreset.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="css/animate.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/all.js"></script>
+
+  <script>
+
+    let app = {
+      state:{}, lib:{}, cst:{
+        MAX_LEVEL: 3
+      }
+    }
+
+    // 核心操作功能
+    app.get = function(selector){
+      return document.querySelector(selector);
+    }
+    app.getAll = function(selector){
+      return document.querySelectorAll(selector);
+    }
+    app.setAttributes = function(obj, attributes){
+      for (let name in attributes){
+        obj[name] = attributes[name];
+      }
+      return obj;
+    }
+    app.createSvgElement = function(tagName, atrs, parentElement){
+      let obj = document.createElementNS("https://www.w3.org/2000/svg", tagName);
+      for (let name in atrs){
+        obj.setAttribute(name, atrs[name]);
+      }
+      if(parentElement instanceof Element){
+        parentElement.appendChild(obj);
+      }
+      return obj;
+    }
+    app.modifySvgElement = function(obj, atrs, parentElement){
+      for (let name in atrs){
+        obj.setAttribute(name, atrs[name]);
+      }
+      if(parentElement === obj.parentNode){
+        parentElement.removeChild(obj);
+      } else if(parentElement instanceof Element){
+        parentElement.appendChild(obj);
+      }
+      return obj;
+    }
+    app.setEventHandlers = function(obj, eventHandlers, useCapture){
+      for(let name in eventHandlers){
+        if(eventHandlers[name] instanceof Array){
+          for (let i =0; i<eventHandlers[name].length; i++){
+            obj.addEventListener(name, eventHandlers[name][i], useCapture);
+          }
+        } else {
+          obj.addEventListener(name, eventHandlers[name], useCapture);
+        }
+      }
+      return obj;
+    }
+
+    // 主流程
+    app.init = function() {
+      // 初始化狀態，把 lib 轉成區域變數，方便引用
+      let Skill = app.lib.Skill;
+
+      // 假設這些 state.skill 可能是從後端拿來的，所以保留彈性
+      app.state.skills={
+        // key: new Skill(step, count, name, preSkills)
+        // step 0
+        "s_0_0": new Skill(0, 0, "Skill-0-0", []),
+        "s_0_1": new Skill(0, 1, "Skill-0-0", []),
+        // step 1
+        "s_1_0": new Skill(1, 0, "Skill-0-0", ["s_0_1"]),
+        // step 2
+        "s_2_0": new Skill(2, 0, "Skill-0-0", ["s_1_0"]),
+        "s_2_1": new Skill(2, 1, "Skill-0-0", ["s_1_0", "s_0_1"]),
+        // step 3
+        "s_3_0": new Skill(3, 0, "Skill-0-0", ["s_2_1"]),
+        "s_3_1": new Skill(3, 1, "Skill-0-0", ["s_2_0", "s_2_1"]),
+        "s_3_2": new Skill(3, 2, "Skill-0-0", ["s_2_1"]),
+      }
+      // 把字串轉成真正的物件
+      for (let key in app.state.skills){
+        app.state.skills[key].preSkills = app.state.skills[key].map(function(key){
+          return app.state.skills[key];
+        })
+      }
+      // 產生介面
+      app.render();
+    }
+
+    // 渲染畫面
+    app.render = function() {
+
+    }
+    // 程式進入點
+    window.addEventListener("load", app.init)
+
+    // 自訂類別庫
+    app.lib.Skill = class {
+      constructor(step, count, name, preSkills){
+        this.step = step; // 整棵樹中的主階段
+        this.count = count; // 每個階段中的技能編號
+        this.name = name; // 技能名稱
+        this.preSkills = preSkills; // 前製技能列表
+        this.level = 0; // 技能等級，預設從 0 開始
+      }
+    }
+  </script>
+
+</head>
+
+<body style="text-align:center;">
+  <h1>系統化的完成技能樹功能</h1>
+  <svg width="1000" height:"500" id="ground"></svg>
+
+</body>
+
+</html>
