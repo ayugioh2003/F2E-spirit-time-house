@@ -87,17 +87,19 @@
       app.state.skills={
         // key: new Skill(step, count, name, preSkills)
         // step 0
-        "s_0_0": new Skill(0, 0, "Skill-0-0", []),
-        "s_0_1": new Skill(0, 1, "Skill-0-1", []),
+        "s_0_0": new Skill(0, 0, "HTML&CSS", []),
         // step 1
-        "s_1_0": new Skill(1, 0, "Skill-1-0", ["s_0_0", "s_0_1"]),
+        "s_1_0": new Skill(1, 0, "jQuery", ["s_0_0"]),
         // step 2
-        "s_2_0": new Skill(2, 0, "Skill-2-0", ["s_1_0"]),
-        "s_2_1": new Skill(2, 1, "Skill-2-1", ["s_0_1"]),
+        "s_2_0": new Skill(2, 0, "RWD", ["s_1_0"]),
+        "s_2_1": new Skill(2, 1, "JavaScript", ["s_1_0"]),
         // step 3
-        "s_3_0": new Skill(3, 0, "Skill-3-0", ["s_2_1"]),
-        "s_3_1": new Skill(3, 1, "Skill-3-1", ["s_2_0", "s_2_1"]),
-        "s_3_2": new Skill(3, 2, "Skill-3-2", ["s_2_1"])
+        "s_3_0": new Skill(3, 0, "Bootstrap 4", ["s_2_0"]),
+        "s_3_1": new Skill(3, 1, "Vue", ["s_2_1"]),
+        "s_3_2": new Skill(3, 2, "Node.js", ["s_2_1"]),
+        "s_3_3": new Skill(3, 3, "Git/Gulp", ["s_2_1"]),
+        // step 4 
+        "s_4_0": new Skill(4, 3, "一頁式金流", ["s_3_3"])
       }
       // 把字串轉成真正的物件
       for (let key in app.state.skills){
@@ -198,7 +200,9 @@
 
 <body style="text-align:center;">
   <h1>系統化的完成技能樹功能</h1>
-  <svg width="1000" height="500" id="ground"></svg>
+  <svg width="1200" height="500" id="ground"></svg>
+  <p>我目前習得的部份</p>
+  <p> (1) HTML&CSS、(2) jQuery</p>
 </body>
 
 </html>
