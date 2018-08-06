@@ -30,7 +30,7 @@
 2018-08-05-星期日
 
 * 參考
-    * [(85) 系統化的完成遊戲技能樹 - 彭彭直播 - 精神時光屋 at 2018/08/03 - YouTube](https://www.youtube.com/watch?v=tAKoBulUArg)
+    * [系統化的完成遊戲技能樹 - 彭彭直播 - 精神時光屋 at 2018/08/03 - YouTube](https://www.youtube.com/watch?v=tAKoBulUArg)
     * [live-samples/skill-tree.html at master · cwpeng/live-samples](https://github.com/cwpeng/live-samples/blob/master/samples/skill-tree.html)
 * SVG 與命名空間
     * [XML 命名空間 - 維基百科，自由的百科全書](https://zh.wikipedia.org/wiki/XML%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4)

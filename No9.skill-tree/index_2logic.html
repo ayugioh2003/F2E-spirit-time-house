@@ -15,15 +15,6 @@
 
   <script>
 
-    // window.addEventListener("load", app.init)
-    // app 
-    // app > state, lib, cst
-    // app.state > skills > new SKill obj
-    // app.lib > Skill > render(), upgrade()
-    // app.cst > MAX_LEVEL
-    // app 自己包裝的核心功能
-    // app > init(), render()
-
     let app = {
       state:{}, lib:{}, cst:{
         MAX_LEVEL: 3
@@ -90,7 +81,7 @@
         "s_0_0": new Skill(0, 0, "Skill-0-0", []),
         "s_0_1": new Skill(0, 1, "Skill-0-1", []),
         // step 1
-        "s_1_0": new Skill(1, 0, "Skill-1-0", ["s_0_0", "s_0_1"]),
+        "s_1_0": new Skill(1, 0, "Skill-1-0", ["s_0_0"]),
         // step 2
         "s_2_0": new Skill(2, 0, "Skill-2-0", ["s_1_0"]),
         "s_2_1": new Skill(2, 1, "Skill-2-1", ["s_0_1"]),
@@ -112,38 +103,19 @@
     // ----- 三、渲染畫面 -----
     app.render = function() {
       let skills = app.state.skills;
+      let stepDistance = 250;
+      let countDistance = 120;
+      let circleRadius = 50;
       let ground = app.get("#ground")
       ground.innerHTML="" // 因為要重畫，所以先清空
 
       for (let key in skills){
         let skill = skills[key];
-        skill.render()
-      }
-    }
-
-    // ----- 四、程式進入點 -----
-    window.addEventListener("load", app.init)
-
-    // ----- 五、自訂類別庫 -----
-    app.lib.Skill = class {
-      constructor(step, count, name, preSkills){
-        this.step = step; // 整棵樹中的主階段
-        this.count = count; // 每個階段中的技能編號
-        this.name = name; // 技能名稱
-        this.preSkills = preSkills; // 前製技能列表
-        this.level = 0; // 技能等級，預設從 0 開始
-      }
-      render(){
-        let stepDistance = 250;
-        let countDistance = 120;
-        let circleRadius = 50;
-        let ground = app.get("#ground")
-
         // 建立技能的圓圈圈畫面
         // tagName, atrs, parentElement
-        let x = stepDistance * (this.step+0.5)
-        let y = countDistance * (this.count+0.5)
-        let opacity = 0.1+(0.3*this.level)
+        let x = stepDistance * (skill.step+0.5)
+        let y = countDistance * (skill.count+0.5)
+        let opacity = 0.1+(0.3*skill.level)
         let circle = app.createSvgElement("circle", {
           "cx":x, "cy":y, "r":circleRadius, 
           "fill":"#ddeeff", "stroke":"#8899aa",
@@ -153,11 +125,11 @@
         // 建立每個技能名字的文字
         app.createSvgElement("text", {
           "x":x, "y":y+5, "text-anchor": "middle"
-        }, ground).textContent=this.name;
+        }, ground).textContent=skill.name;
 
         // 建立和前置技能的線條連結、與記錄前置技能是否被完成
         let ready = true; // 記錄目前的技能是否準備好可以按了
-        this.preSkills.forEach(function(preSkill){
+        skill.preSkills.forEach(function(preSkill){
           let startX = stepDistance * (preSkill.step+0.5)
           let startY = countDistance * (preSkill.count+0.5)
 
@@ -174,25 +146,33 @@
         })
 
         // 如果可以按，就註冊點擊事件
-        if(ready && (this.level < app.cst.MAX_LEVEL) ) {
+        if(ready && (skill.level < app.cst.MAX_LEVEL) ) {
           app.setEventHandlers(circle, {
-            "click": this.upgrade.bind(this)
+            "click": function(){
+              skill.level++;
+              app.render();
+            }
           })
         }
+
+
       }
-      upgrade(){
-        // 傳統函式與箭頭函式綁定物件不同
-        this.level++;
-        app.render();
+    }
+
+    // ----- 四、程式進入點 -----
+    window.addEventListener("load", app.init)
+
+    // ----- 五、自訂類別庫 -----
+    app.lib.Skill = class {
+      constructor(step, count, name, preSkills){
+        this.step = step; // 整棵樹中的主階段
+        this.count = count; // 每個階段中的技能編號
+        this.name = name; // 技能名稱
+        this.preSkills = preSkills; // 前製技能列表
+        this.level = 0; // 技能等級，預設從 0 開始
       }
     }
   </script>
-
-  <style>
-    circle:hover{
-      cursor: pointer;
-    }
-  </style>
 
 </head>
 
