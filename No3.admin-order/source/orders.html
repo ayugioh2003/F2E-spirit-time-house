@@ -1,0 +1,226 @@
+---
+title: 後台訂單
+layout: ./source/layout.ejs
+engine: ejs
+current: orders
+---
+
+<main class="container main">
+  <!-- select -->
+  <div class="d-flex justify-content-between mt-3 mb-2">
+    <div class="select">
+      <i class="far fa-square"></i>
+      <i class="fas fa-sort-down align-text-top"></i>
+      <div class="select-menu">
+        <div>Selest All</div>
+        <div>Unselect All</div>
+        <div>Paid</div>
+        <div>Unpaid</div>
+        <div>Shipping</div>
+        <div>Done</div>
+      </div>
+    </div>
+    <div class="select">
+      <span>EDIT SECTION</span>
+      <i class="fas fa-sort-down align-text-top"></i>
+      <div class="select-menu">
+        <div>
+          <i class="far fa-square"></i>Order ID
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Customer
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Product List
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Total
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Add to Cart
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Check-out
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Address
+        </div>
+        <div>
+          <i class="far fa-square"></i>Phone
+        </div>
+        <div>
+          <i class="far fa-square"></i>Email
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Status
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- table -->
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="bg-white border-0">
+        <th>Customer</th>
+        <th>Product List</th>
+        <th>Total</th>
+        <th>Add to Cart</th>
+        <th>Check-out</th>
+        <th>Address</th>
+        <th>Status</th>
+      </thead>
+      <tbody >
+        <tr>
+          <td cstmer>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            Ian Medina
+          </td>
+          <td pdctlist>
+            <div class="detail mb-2">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+
+          </td>
+          <td total>$2,200 </td>
+          <td add2cart>2018/6/8 13:39 </td>
+          <td checkoutout>2018/6/8 13:39 </td>
+          <td address>386 Windler Drives Apt. 358 </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-green">
+                PAID
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Paid</div>
+                <div>Unpaid</div>
+                <div>Shipping</div>
+                <div>Done</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cstmer>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            Ian Medina
+          </td>
+          <td pdctlist>
+            <div class="detail mb-2">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+
+          </td>
+          <td total>$2,200 </td>
+          <td add2cart>2018/6/8 13:39 </td>
+          <td checkoutout>2018/6/8 13:39 </td>
+          <td address>386 Windler Drives Apt. 358 </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-orange">
+                SHIPPING
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Paid</div>
+                <div>Unpaid</div>
+                <div>Shipping</div>
+                <div>Done</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cstmer>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            Ian Medina
+          </td>
+          <td pdctlist>
+            <div class="detail mb-2">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+
+          </td>
+          <td total>$2,200 </td>
+          <td add2cart>2018/6/8 13:39 </td>
+          <td checkoutout>2018/6/8 13:39 </td>
+          <td address>386 Windler Drives Apt. 358 </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-blue">
+                DONE
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Paid</div>
+                <div>Unpaid</div>
+                <div>Shipping</div>
+                <div>Done</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- navigation -->
+  <nav>
+    <ul class="pagination justify-content-end bg-bray">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</main>

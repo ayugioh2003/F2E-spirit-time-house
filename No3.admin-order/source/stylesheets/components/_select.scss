@@ -1,0 +1,32 @@
+.select {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .select-menu {
+      display: block;
+    }
+  }
+
+  &-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 140px;
+    box-shadow: 1px 1px 5px black;
+    background-color: white;
+
+    div {
+      padding: .6rem;
+
+      &:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+
+    i {
+      margin-right: 8px;
+    }
+  }
+}
