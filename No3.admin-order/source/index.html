@@ -13,9 +13,9 @@ current: index
       <div class="h3 mb-0">OVERVIEW</div>
       <div class="home-select align-self-end">
         <block class="home-select-date mr-3">
-          <a class="text-secondary" href="#">2018/6/6</a>
+          <a id="since" class="text-secondary" href="#">2018/6/6</a>
           <i class="fas fa-caret-right"></i>
-          <a class="text-secondary" href="#">2018/6/13</a>
+          <a id="to" class="text-secondary" href="#">2018/6/13</a>
         </block>
         <block class="home-select-week">
           <a class="text-secondary" href="#">Weekly</a>
@@ -25,7 +25,7 @@ current: index
             <li>Weekly</li>
             <li>Monthly</li>
             <li>Yearly</li>
-            <li>Custom</li>
+            <!-- <li>Custom</li> -->
           </ul>
         </block>
       </div>
@@ -276,6 +276,7 @@ current: index
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
 <script>
+  // chart
   var ctx = document.getElementById('myChart');
   var myChart = new Chart(ctx, {
     type: 'line',
@@ -327,4 +328,52 @@ current: index
     }
   });
 
+  const select = document.querySelector('.home-select-week')
+  const selectData = {
+    Daily: [
+      [1,2,3,4,5,6],
+      [2,3,43,14,35,46],
+      [13,26,32,45,51,63]
+    ],
+    Weekly: [
+      [13,24,35,41,35,64],
+      [51,32,53,14,35,61],
+      [11,52,33,24,55,67]
+    ],
+    Monthly: [
+      [13,72,36,42,54,64],
+      [51,12,32,14,55,76],
+      [12,24,38,44,56,26]
+    ],
+    Yearly: [
+      [11,42,63,43,52,65],
+      [15,22,33,45,51,62],
+      [14,22,32,45,51,62]
+    ]
+  }
+  const sinceto = {
+    Daily: ['2018/06/12', '2018/06/13'],
+    Weekly: ['2018/06/06', '2018/06/13'],
+    Monthly: ['2018/05/13', '2018/06/13'],
+    Yearly: ['2017/06/13', '2018/06/13']
+  }
+  select.addEventListener('click', function(e){
+    let selected = e.target.textContent // 點選到的選項
+
+    let since = document.querySelector('#since')
+    let to = document.querySelector('#to')
+
+    since.textContent = sinceto[selected][0]
+    to.textContent = sinceto[selected][1]
+
+    // 更新圖表資料
+    selectData[selected].forEach((item, i, arr)=>{
+      myChart.data.datasets[i].data = selectData[selected][i]
+    })
+    myChart.update()
+  }, false)
+
+  function update() {
+
+  }
 </script>
