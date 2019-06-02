@@ -360,6 +360,8 @@ current: index
 
   select.addEventListener('click', function(e){
     let selected = e.target.textContent // 點選到的選項
+    const selection = document.querySelector('.home-select-week a')
+    selection.textContent = selected
 
     let since = document.querySelector('#since')
     let to = document.querySelector('#to')
