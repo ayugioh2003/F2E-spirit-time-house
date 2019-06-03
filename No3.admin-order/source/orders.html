@@ -12,21 +12,21 @@ current: orders
       <i class="far fa-square"></i>
       <i class="fas fa-sort-down align-text-top"></i>
       <div class="select-menu">
-        <div>Selest All</div>
-        <div>Unselect All</div>
-        <div>Paid</div>
-        <div>Unpaid</div>
-        <div>Shipping</div>
-        <div>Done</div>
+        <div class="select-option">Select All</div>
+        <div class="select-option">Unselect All</div>
+        <div class="select-option">Paid</div>
+        <div class="select-option">Unpaid</div>
+        <div class="select-option">Shipping</div>
+        <div class="select-option">Done</div>
       </div>
     </div>
     <div class="select">
       <span>EDIT SECTION</span>
       <i class="fas fa-sort-down align-text-top"></i>
-      <div class="select-menu">
-        <div>
+      <div class="select-menu section">
+        <!-- <div>
           <i class="far fa-square"></i>Order ID
-        </div>
+        </div> -->
         <div>
           <i class="fas fa-check-square"></i>Customer
         </div>
@@ -45,12 +45,12 @@ current: orders
         <div>
           <i class="fas fa-check-square"></i>Address
         </div>
-        <div>
+        <!-- <div>
           <i class="far fa-square"></i>Phone
         </div>
         <div>
           <i class="far fa-square"></i>Email
-        </div>
+        </div> -->
         <div>
           <i class="fas fa-check-square"></i>Status
         </div>
@@ -70,7 +70,7 @@ current: orders
         <th>Address</th>
         <th>Status</th>
       </thead>
-      <tbody >
+      <tbody>
         <tr>
           <td cstmer>
             <label for="">
@@ -224,3 +224,253 @@ current: orders
   </nav>
 
 </main>
+
+<div class="test"></div>
+
+<script>
+
+  let datas = [
+    {
+      customer: 'Amy',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Paid',
+      checked: false
+    },
+    {
+      customer: 'John',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Shipping',
+      checked: false
+    },
+    {
+      customer: 'John',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        },
+        {
+          name: 'hat',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Done',
+      checked: true
+    },
+    {
+      customer: 'John',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Unpaid',
+      checked: true
+    },
+  ]
+  let btnColor = {
+    Paid: 'btn-green',
+    Shipping: 'btn-orange',
+    Done: 'btn-blue',
+    Uppaid: 'btn-secondary'
+  }
+
+  function render(datas) {
+
+    let totalStr = ''
+
+    datas.forEach((data, i, datas) => {
+
+      // productlist
+      let tdPdctlist = ''
+      data.productlist.forEach((product, j, data) => {
+        let temp = `
+        <div class="detail mb-2">
+          <div>${product.name}</div>
+          <div class="d-flex justify-content-between">
+            <div class="text-secondary">${product.price}</div>
+            <div>${product.num}</div>
+          </div>
+        </div>
+        `
+        tdPdctlist += temp
+      })
+
+      // table row
+      let trStr = function () {
+        return `
+    <tr>
+      <td cstmer>
+        <label for="">
+          <i class="far fa-${data.checked ? 'check-' : ""}square checked"></i>
+        </label>
+        ${data.customer}
+      </td>
+      <td pdctlist>
+        ${tdPdctlist}
+      </td>
+      <td total>${data.total} </td>
+      <td add2cart>${data.addcarttime} </td>
+      <td checkoutout>${data.checkouttime} </td>
+      <td address>${data.address} </td>
+      <td status class="status">
+        <div class="select">
+          <button class="btn ${btnColor[data.status]}">
+            ${data.status}
+            <i class="fas fa-sort-down align-text-top"></i>
+          </button>
+          <div class="select-menu">
+            <div>Paid</div>
+            <div>Unpaid</div>
+            <div>Shipping</div>
+            <div>Done</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    `
+      }()
+
+      totalStr += trStr
+    })
+
+
+    document.querySelector('tbody').innerHTML = totalStr
+  }
+
+  // 初始化
+  render(datas)
+
+  // 勾選判斷
+  document.querySelector('table').addEventListener('click', (e) => {
+    var el = e.target
+    var tr = el.parentElement.parentElement.parentElement
+
+    // 是否點擊到勾選框
+    if (el.className.split(" ")[2] == 'checked') {
+      var index = [].indexOf.call(tr.parentElement.children, tr)
+      datas[index].checked = !datas[index].checked
+    }
+
+    render(datas)
+  })
+
+  // 勾選篩選
+  document.querySelector('.select-menu').addEventListener('click', (e) => {
+
+    let text = e.target.textContent
+    let filterData = datas
+
+    if (text == 'Select All') datas.forEach(data => data.checked = true)
+    if (text == 'Unselect All') datas.forEach(data => data.checked = false)
+
+    if (text == 'Paid') filterData = datas.filter(data => data.status == "Paid")
+    if (text == 'Unpaid') filterData = datas.filter(data => data.status == "Unpaid")
+    if (text == 'Shipping') filterData = datas.filter(data => data.status == "Shipping")
+    if (text == 'Done') filterData = datas.filter(data => data.status == "Done")
+
+    render(filterData)
+  })
+
+  // 修改狀態
+  document.querySelector('tbody').addEventListener('click', (e) => {
+    let statusDiv = e.target
+    let tbody = document.querySelector('tbody')
+  
+    if (e.target.textContent == 'Paid' || 
+        e.target.textContent =='Unpaid' || 
+        e.target.textContent =='Shipping' ||
+        e.target.textContent == 'Done') {
+
+      let tr = e.target.parentElement.parentElement.parentElement.parentElement
+      var index = [].indexOf.call(tbody.children, tr)
+      datas[index].status = e.target.textContent
+
+      render(datas)
+    }
+
+  })
+
+  // 欄位篩選
+  let sectionData = {
+    'Customer': true,
+    'Product List': true,
+    'Total': true,
+    'Add to Cart': true,
+    'Check-out': true,
+    'Address': true,
+    'Status': true
+  }
+  document.querySelector('.section').addEventListener('click', (e) => {
+    let text = e.target.textContent.trim()
+    let icon = e.target.querySelector('i')
+
+    // 切換勾選狀態
+    sectionData[text] = !sectionData[text]
+    icon.classList.toggle('fa-check-square')
+    icon.classList.toggle('fa-square')
+
+    var index = [].indexOf.call(e.target.parentElement.children, e.target)
+    // datas[index].checked = !datas[index].checked
+    console.log(index)
+
+    // 隱藏欄位
+    document.querySelectorAll('thead tr th')[index].classList.toggle('d-none')
+    document.querySelectorAll('tbody tr').forEach(tr => {
+      tr.children[index].classList.toggle('d-none')
+    })
+  })
+
+</script>

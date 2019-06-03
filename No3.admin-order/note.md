@@ -56,6 +56,34 @@ table colspan 合併欄位空間
 * [table 測試](https://codepen.io/ayugioh2003/pen/KLbXrW?editors=1000)
 
 
+### table 篩選
+篩選 抓取目前 tr 是第幾筆資料
+* [javascript 怎麽獲取是第幾個元素 - SegmentFault 思否](https://segmentfault.com/q/1010000015555727)
+`var index = [].indexOf.call(tr.parentElement.children, tr)`
+
+切換 classNAme
+* [How To Toggle Between Class Names](https://www.w3schools.com/howto/howto_js_toggle_class.asp)
+`element.classList.toggle("mystyle");`
+
+抓父層元素
+* [Node.parentElement - Web API 接口參考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/parentElement)
+* [Node.parentNode - Web API 接口參考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/parentNode)
+* [parentNode 和 parentElement 區别 - zhishaofei3 - 博客園](https://www.cnblogs.com/zhishaofei/p/4091865.html)
+* [why not parentElement instead of parentNode? | Treehouse Community](https://webcache.googleusercontent.com/search?q=cache:jaJW6UOr8gIJ:https://teamtreehouse.com/community/why-not-parentelement-instead-of-parentnode+&cd=5&hl=zh-TW&ct=clnk&gl=tw)
+* [javascript - Getting the parent div of element - Stack Overflow](https://stackoverflow.com/questions/6856871/getting-the-parent-div-of-element)
+* [javascript - Difference between DOM parentNode and parentElement - Stack Overflow](https://stackoverflow.com/questions/8685739/difference-between-dom-parentnode-and-parentelement)
+* [parentElement 和 parentNode 的區别 - software_developer 的專欄 - CSDN 博客](https://blog.csdn.net/software_developer/article/details/3862565)
+* [Js 中 parentNode,parentElement,childNodes,children 之間的區別 Script - IT 閱讀](https://www.itread01.com/p/1088470.html)
+* [parentNode,parentElement 區别 - 程序園](http://www.voidcn.com/article/p-gasrrkzi-bpb.html)
+
+
+
+### Modal
+隱藏 modal
+`$('#myModal').modal('hide')`
+* [Modal · Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/)
+
+
 
 
 ## 直播主切版
