@@ -82,7 +82,7 @@ table colspan 合併欄位空間
 隱藏 modal
 `$('#myModal').modal('hide')`
 * [Modal · Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/)
-
+* [【Bootstrap3】#10 modal 提供資訊給使用者 & 對話框 & 填表單視窗 - YouTube](https://www.youtube.com/watch?v=YoSr3KivlYc)
 
 
 
