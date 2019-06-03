@@ -1,21 +1,34 @@
-# 網站名稱
+# Admin-order
+
+> 由六角學院提供設計稿的切版練習。
+
+![](https://i.imgur.com/jkjDMjK.png)
+
+## DEMO
+* [網站後台](https://ayugioh2003.github.io/F2E-spirit-time-house/No3.admin-order/)
 
 
+## 設計稿
 
-![](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/35485112_1952134021472900_4572156655558459392_n.jpg?_nc_cat=0&_nc_eui2=AeF9EEJayUEBQ_zLWlkEBYOafm9S3-0Z__X842S1o1zGczvZYgrSQu0aKsRuPXqDB3my96XqbwL_AkSOnIJJj9LvLstsFZRrz8NBLLN2adGB6Q&oh=085217fc9ff556225388afc3733a48b8&oe=5BA78AB4)
+* [The F2E - 前端修練精神時光屋](https://hexschool.github.io/THE_F2E_Design/week3-admin%20order/#artboard0)
 
-* [Document](https://ayugioh2003.github.io/F2E-spirit-time-house/No3.admin-order/)
+## 使用技術 / 練習技術
 
-## 網站介紹
+* EJS
+* Bootstrap 4 
+* SCSS
+* EcmaScript 原生語法
+* DOM 操作
+* Gulp
+* Font Awesome 引用
 
-先卡位
 
+## 聲明
 
-## 網站目標
+設計稿為六角學院所有，採 CC 授權
 
+此專案為個人練習切版與 JS 的作品
 
-
-## 更新
 
 
 
