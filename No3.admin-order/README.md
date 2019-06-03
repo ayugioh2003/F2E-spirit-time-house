@@ -5,7 +5,7 @@
 ![](https://i.imgur.com/jkjDMjK.png)
 
 ## DEMO
-* [網站後台](https://ayugioh2003.github.io/F2E-spirit-time-house/No3.admin-order/)
+* [網站後台](https://ayugioh2003.github.io/F2E-spirit-time-house/No3.admin-order/public)
 
 
 ## 設計稿

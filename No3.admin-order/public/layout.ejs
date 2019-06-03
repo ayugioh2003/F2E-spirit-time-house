@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%- title %>
+  </title>
+  <meta property="og:title" content="<%- title %> " />
+  <meta property="og:description" content="網站後台" />
+  <meta property="og:site_name" content=" 網站後台 " />
+  <meta property="og:locale" content="zh_TW" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="icon" href="./images/logo-dark.png">
+  <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Shoptime</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link <% if (current === 'index') {%>active<%} %>" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <% if (current === 'orders') {%>active<%} %>" href="./orders.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <% if (current === 'product') {%>active<%} %>" href="./product.html">Product</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <a href="#" style="text-decoration: none;">Admin</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <%- contents %>
+
+  <!-- footer -->
+  <footer class="container-fluid py-3 bg-info text-center">
+    <div class="text-white mb-2">
+      網站後台
+    </div>
+    <div>
+      <a class="text-warning"
+        href="https://hexschool.github.io/THE_F2E_Design/week3-admin%20order/#artboard0">設計稿來源：精神時光屋</a>
+    </div>
+  </footer>
+  <!-- footer END -->
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/all.js"></script>
+</body>
+
+</html>

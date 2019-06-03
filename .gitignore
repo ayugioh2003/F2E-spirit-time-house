@@ -4,7 +4,7 @@ node_modules
 bower_components
 
 .publish
-public
+# public
 
 .tmp
 .xd

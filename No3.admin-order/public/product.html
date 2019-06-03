@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    後台產品
+  </title>
+  <meta property="og:title" content="後台產品 " />
+  <meta property="og:description" content="網站後台" />
+  <meta property="og:site_name" content=" 網站後台 " />
+  <meta property="og:locale" content="zh_TW" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="icon" href="./images/logo-dark.png">
+  <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Shoptime</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./orders.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./product.html">Product</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <a href="#" style="text-decoration: none;">Admin</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  
+<main class="container main">
+  <!-- select -->
+  <div class="d-flex justify-content-between mt-3 mb-2">
+    <div class="select">
+      <i class="far fa-square"></i>
+      <i class="fas fa-sort-down align-text-top"></i>
+      <div class="select-menu">
+        <div>Select All</div>
+        <div>Unselect All</div>
+        <div>Publish</div>
+        <div>Unpublish</div>
+      </div>
+    </div>
+    <button id="addBtn" class="btn btn-dark" data-toggle="modal" data-target="#addProductModal">
+      ADD NEW PRODUCT
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+
+  <!-- table -->
+  <div class="table-responsive">
+    <table class="table table-striped product-table">
+      <!-- <caption class="text-center">test</caption> -->
+      <colgroup>
+        <col>
+        <col>
+        <col>
+        <col span="3">
+        <col>
+      </colgroup>
+      <thead class="bg-white border-0">
+        <tr>
+          <th>Product</th>
+          <th class="text-right">Original</th>
+          <th class="text-right">Discount</th>
+          <th>Size</th>
+          <th>Color</th>
+          <th>Stock</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td product>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            <img class="align-middle"
+              src="https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
+              width="80">
+            T-shirt
+          </td>
+          <td original class="text-right">$3,200</td>
+          <td disconnt class="text-right">$2,800</td>
+          <td colspan="3">
+            <div class="d-flex ">
+              <div style="width: 28%;">L</div>
+              <div style="width: 50%">Gray <br>Black</div>
+              <div>15 <br>20</div>
+            </div>
+            <div class="d-flex ">
+              <div style="width: 28%;">M</div>
+              <div style="width: 50%">Gray <br>Black</div>
+              <div>15 <br>20</div>
+            </div>
+            <div class="d-flex ">
+              <div style="width: 28%;">S</div>
+              <div style="width: 50%">Gray <br>Black</div>
+              <div>15 <br>20</div>
+            </div>
+          </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-secondary">
+                Unpublish
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Publish</div>
+                <div>Unpublish</div>
+                <div class="bg-danger">Delete</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td product>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            <img class="align-middle"
+              src="https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
+              width="80">
+            T-shirt
+          </td>
+          <td original class="text-right">$3,200</td>
+          <td disconnt class="text-right">$2,800</td>
+          <td colspan="3">
+            <div class="d-flex ">
+              <div style="width: 28%;">L</div>
+              <div style="width: 50%">Gray <br>Black</div>
+              <div>15 <br>20</div>
+            </div>
+            <div class="d-flex ">
+              <div style="width: 28%;">M</div>
+              <div style="width: 50%">Gray <br>Black</div>
+              <div>15 <br>20</div>
+            </div>
+            <div class="d-flex ">
+              <div style="width: 28%;">S</div>
+              <div style="width: 50%">Gray <br>Black</div>
+              <div>15 <br>20</div>
+            </div>
+          </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-green">
+                PUBLISH
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Publish</div>
+                <div>Unpublish</div>
+                <div class="bg-danger">Delete</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          ADD NEW PRODUCT
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body container">
+        <div class="form-row">
+          <div class="col-md-5" 拖拉區>
+            <div class="dragarea">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <span>Drag an image or click here to upload ...</span>
+            </div>
+          </div>
+          <div class="col-md-7" 填寫區>
+            <div class="row mb-3" 產品描述>
+              <div class="col">
+                <div class="form-group">
+                  <label for="Title">Product Discription</label>
+                  <input type="text" class="form-control" id="Title" placeholder="Title">
+                </div>
+                <textarea class="form-control" rows="5" placeholder="Discription"></textarea>
+              </div>
+            </div>
+            <div class="form-row" 價格>
+              <div class="col-md-12">Price</div>
+              <div class="col-md">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Original</span>
+                  </div>
+                  <input id="Original" type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Discount</span>
+                  </div>
+                  <input id="Discount" type="number" class="form-control">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="col-md-12">Spectification</div>
+            </div>
+            <div class="form-row specWrap" 規格>
+
+              <div class="col-md-4">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="Size">Size</label>
+                  </div>
+                  <select class="custom-select Size" id="Size">
+                    <option selected>Choose...</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="S">S</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Color</span>
+                  </div>
+                  <input id="Color" type="text" class="form-control Color">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Stock</span>
+                  </div>
+                  <input id="Stock" type="number" class="form-control Stock">
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-dark w-100 addSpecBtn">
+              ADD NEW SPECIFICATION
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="draftBtn" type="button" class="btn btn-outline-dark" data-dismiss="modal">SAVA DRAFT</button>
+          <button id="publishBtn" type="button" class="btn btn-dark">Publish</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // table 篩選
+  let datas = [
+    {
+      Product: {
+        img: "https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
+        name: 'T-shirt'
+      },
+      Price: {
+        Original: 3200,
+        Discount: 2800,
+      },
+      Spectification: [
+        {
+          Size: 'L',
+          Color: 'Gray',
+          Stock: 5
+        },
+        {
+          Size: 'L',
+          Color: 'Black',
+          Stock: 20
+        },
+        {
+          Size: 'M',
+          Color: 'Gray',
+          Stock: 5
+        },
+        {
+          Size: 'M',
+          Color: 'Black',
+          Stock: 5
+        }
+      ],
+      Status: 'Publish',
+      checked: false
+    },
+    {
+      Product: {
+        img: "https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
+        name: 'T-shirt2'
+      },
+      Price: {
+        Original: 3200,
+        Discount: 2800,
+      },
+      Spectification: [
+        {
+          Size: 'L',
+          Color: 'Gray',
+          Stock: 5
+        },
+        {
+          Size: 'L',
+          Color: 'Black',
+          Stock: 11
+        },
+        {
+          Size: 'M',
+          Color: 'Gray',
+          Stock: 5
+        },
+        {
+          Size: 'M',
+          Color: 'Black',
+          Stock: 5
+        }
+      ],
+      Status: 'Unpublish',
+      checked: true
+    },
+    {
+      Product: {
+        img: "https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
+        name: 'T-shirt3'
+      },
+      Price: {
+        Original: 3200,
+        Discount: 2800,
+      },
+      Spectification: [
+        {
+          Size: 'L',
+          Color: 'Gray',
+          Stock: 5
+        },
+        {
+          Size: 'L',
+          Color: 'Black',
+          Stock: 11
+        },
+        {
+          Size: 'M',
+          Color: 'Gray',
+          Stock: 5
+        },
+        {
+          Size: 'M',
+          Color: 'Black',
+          Stock: 5
+        }
+      ],
+      Status: 'Unpublish',
+      checked: true
+    },
+  ]
+  let btnColor = {
+    Publish: 'btn-green',
+    Unpublish: 'btn-secondary',
+    Delete: 'btn-danger'
+  }
+
+  function render(datas) {
+
+    let totalStr = ''
+
+    datas.forEach((data, i, datas) => {
+
+      // Spectification
+      let tdSpecification = ''
+      let tempCount = {}
+
+      data.Spectification.forEach((product, j, data) => {
+
+        let temp = `
+          <div class="d-flex ">
+            <div style="width: 28%;">
+              ${tempCount[product.Size] ? "" : product.Size}
+            </div>
+            <div style="width: 50%">${product.Color}</div>
+            <div>${product.Stock}</div>
+          </div>
+        `
+
+        // 隱藏第二個之後的 Size 
+        if (tempCount[product.Size] == undefined) {
+          tempCount[product.Size] = 1
+        } else {
+          tempCount[product.Size] += 1
+        }
+
+        tdSpecification += temp
+      })
+
+      // table row
+      let trStr = function () {
+        return `
+        <tr>
+          <td product>
+            <label for="">
+              <i class="far fa-${data.checked ? 'check-' : ''}square checked"></i>
+            </label>
+            <img class="align-middle"
+              src=${data.Product.img} width="80">
+            ${data.Product.name}
+          </td>
+          <td original class="text-right">${data.Price.Original}</td>
+          <td disconnt class="text-right">${data.Price.Discount}</td>
+          <td colspan="3">
+            ${tdSpecification}
+          </td>
+          <td status>
+            <div class="select">
+              <button class="btn ${btnColor[data.Status]}">
+                ${data.Status}
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Publish</div>
+                <div>Unpublish</div>
+                <div class="bg-danger">Delete</div>
+              </div>
+            </div>
+          </td>
+        </tr>                
+        `
+      }()
+
+      totalStr += trStr
+    })
+
+    document.querySelector('tbody').innerHTML = totalStr
+  }
+
+  // 初始化
+  render(datas)
+
+  // 勾選判斷
+  document.querySelector('table').addEventListener('click', (e) => {
+    var el = e.target
+    var tr = el.parentElement.parentElement.parentElement
+
+    // 是否點擊到勾選框
+    if (el.className.split(" ")[2] == 'checked') {
+      var index = [].indexOf.call(tr.parentElement.children, tr)
+      datas[index].checked = !datas[index].checked
+    }
+
+    render(datas)
+  })
+
+  // 勾選篩選
+  document.querySelector('.select-menu').addEventListener('click', (e) => {
+
+    let text = e.target.textContent
+    let filterData = datas
+
+    if (text == 'Select All') datas.forEach(data => data.checked = true)
+    if (text == 'Unselect All') datas.forEach(data => data.checked = false)
+
+    if (text == 'Publish') filterData = datas.filter(data => data.Status == "Publish")
+    if (text == 'Unpublish') filterData = datas.filter(data => data.Status == "Unpublish")
+
+    render(filterData)
+  })
+
+  // 修改狀態
+  document.querySelector('tbody').addEventListener('click', (e) => {
+    let statusDiv = e.target
+    let tbody = document.querySelector('tbody')
+
+    if (e.target.textContent == 'Publish' ||
+      e.target.textContent == 'Unpublish') {
+
+      let tr = e.target.parentElement.parentElement.parentElement.parentElement
+
+      var index = [].indexOf.call(tbody.children, tr)
+      datas[index].Status = e.target.textContent
+
+      render(datas)
+    }
+
+    // 刪除產品
+    if (e.target.textContent == 'Delete') {
+      let tr = e.target.parentElement.parentElement.parentElement.parentElement
+
+      var index = [].indexOf.call(tbody.children, tr)
+      datas.splice(index, 1)
+
+      render(datas)
+    }
+
+  })
+
+
+  // Modal
+  // $('#addBtn').on('shown.bs.modal', function () {
+  //   $('#addProductModal').trigger('focus')
+  // })
+  document.querySelector('#addBtn')
+  .addEventListener('shown.bs.modal', function () {
+    document.querySelector('#addProductModal').focus()
+  })
+
+  // 新增規格
+  const addSpecBtn = document.querySelector('.addSpecBtn')
+  const specWrap = document.querySelector('.specWrap')
+
+  let sizeTemp = `
+  <div class="col-md-4">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="Size">Size</label>
+      </div>
+      <select class="custom-select Size" id="Size">
+        <option selected>Choose...</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+        <option value="S">S</option>
+      </select>
+    </div>
+  </div>
+  `
+
+  let colorTemp = `
+  <div class="col-md-4">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Color</span>
+      </div>
+      <input id="Color" type="text" class="form-control Color">
+    </div>
+  </div>
+  `
+
+  let stockTemp = `
+  <div class="col-md-4">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Stock</span>
+      </div>
+      <input id="Stock" type="number" class="form-control Stock">
+    </div>
+  </div>
+  `
+
+  addSpecBtn.addEventListener('click', (e)=>{
+    specWrap.innerHTML += (sizeTemp+colorTemp+stockTemp)
+  })
+
+
+
+
+
+
+  // 新增商品
+  const publishBtn = document.querySelector('#publishBtn')
+  const draftBtn = document.querySelector('#draftBtn')
+
+  publishBtn.addEventListener('click', ()=>addProduct('Publish') )
+  draftBtn.addEventListener('click', ()=>addProduct('Unpublish') )
+
+
+  function addProduct(status) {
+    let Title = document.querySelector('#Title').value
+    let Original = document.querySelector('#Original').value
+    let Discount = document.querySelector('#Discount').value
+
+    let SizeList = document.querySelectorAll('.Size')
+    let ColorList = document.querySelectorAll('.Color')
+    let StockList = document.querySelectorAll('.Stock')
+
+    let Spectification = []
+
+    SizeList.forEach((item, index, arr)=>{
+      Spectification[index] =  {
+        Size: SizeList[index].value,
+        Color: ColorList[index].value,
+        Stock: StockList[index].value
+      }
+    })
+
+    datas = [...datas, {
+      Product: {
+        img: "https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
+        name: Title
+      },
+      Price: {
+        Original: Original,
+        Discount: Discount,
+      },
+      Spectification: Spectification,
+      Status: status,
+      checked: false
+    }]
+
+    render(datas)
+
+    // 隱藏 & 消除資料
+    $('#addProductModal').modal('hide')  // 隱藏 modal
+    document.querySelector('#Title').value = ''
+    document.querySelector('#Original').value = ''
+    document.querySelector('#Discount').value = ''
+
+    specWrap.innerHTML = (sizeTemp+colorTemp+stockTemp)
+
+  }
+
+</script>
+
+  <!-- footer -->
+  <footer class="container-fluid py-3 bg-info text-center">
+    <div class="text-white mb-2">
+      網站後台
+    </div>
+    <div>
+      <a class="text-warning"
+        href="https://hexschool.github.io/THE_F2E_Design/week3-admin%20order/#artboard0">設計稿來源：精神時光屋</a>
+    </div>
+  </footer>
+  <!-- footer END -->
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/all.js"></script>
+</body>
+
+</html>

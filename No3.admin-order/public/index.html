@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    後台首頁
+  </title>
+  <meta property="og:title" content="後台首頁 " />
+  <meta property="og:description" content="網站後台" />
+  <meta property="og:site_name" content=" 網站後台 " />
+  <meta property="og:locale" content="zh_TW" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="icon" href="./images/logo-dark.png">
+  <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Shoptime</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./orders.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./product.html">Product</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <a href="#" style="text-decoration: none;">Admin</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  
+<main class="container main">
+
+  <!-- overview -->
+  <section class="row  mt-4 mb-3">
+    <div class="col-12 d-flex justify-content-between">
+      <div class="h3 mb-0">OVERVIEW</div>
+      <div class="home-select align-self-end">
+        <block class="home-select-date mr-3">
+          <a id="since" class="text-secondary" href="#">2018/06/06</a>
+          <i class="fas fa-caret-right"></i>
+          <a id="to" class="text-secondary" href="#">2018/06/13</a>
+        </block>
+        <block class="home-select-week">
+          <a class="text-secondary" href="#">Weekly</a>
+          <i class="fas fa-caret-down"></i>
+          <ul class="select-menu">
+            <li>Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
+            <li>Yearly</li>
+            <!-- <li>Custom</li> -->
+          </ul>
+        </block>
+      </div>
+    </div>
+  </section>
+
+  <!-- card -->
+  <section class="form-row">
+    <div class="col-md-4 mb-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="card-title">
+            <i class="fas fa-hand-holding-usd"></i>
+            <b>TOTAL REVENUE</b>
+          </div>
+          <div class="card-text text-green h2">
+            54,540
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="card-title">
+            <i class="fas fa-heart-broken"></i>
+            <b>TOTAL COST</b>
+          </div>
+          <div class="card-text text-red h2">
+            12,660
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="card-title">
+            <i class="fas fa-money-bill-wave"></i>
+            <b>NET INCOME</b>
+          </div>
+          <div class="card-text text-blue h2">
+            41,880
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- chart -->
+  <section class="mb-3">
+    <div class="card position-relative">
+      <div class="card-text position-absolute" style="top: .6rem; left: 1rem">
+        <b>Activity</b>
+      </div>
+      <div class="card-body">
+        <canvas id="myChart" width="400" height="100"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- 來源網站與最新購物 -->
+  <section class="row ">
+    <!-- website -->
+    <div class="col-md-6 mb-3">
+      <div class="card h-100">
+        <div class="card-title pt-4 pl-4 h3">Transaction Website</div>
+        <div class="card-body">
+
+          <div class="siterecord d-flex justify-content-between align-items-center pb-3">
+            <div>
+              <i class="fab fa-facebook-square align-middle mr-2" style="font-size: 3rem"></i>
+              <span class="text-secondary">facebook.com</span>
+            </div>
+            <div>
+              <span class="h5 mr-2">45,836</span>
+              <span class="site-data">
+                <i class="fas fa-arrow-up text-green"></i>
+                <span class="text-green">20%</span>
+                <div class="site-data-tip">
+                  <div class="increase text-white">
+                    INCREASE
+                    <span class="text-green">899</span>
+                    VIEWS
+                  </div>
+                  <div class="lastweek text-gray">last week: 44,937</div>
+                </div>
+
+              </span>
+            </div>
+          </div>
+
+          <div class="siterecord d-flex justify-content-between align-items-center pb-3">
+            <div>
+              <i class="fab fa-google align-middle mr-2" style="font-size: 3rem"></i>
+              <span class="text-secondary">google.com</span>
+            </div>
+            <div>
+              <span class="h5 mr-2">23,582</span>
+              <span class="site-data">
+                <i class="fas fa-arrow-up text-green"></i>
+                <span class="text-green">12%</span>
+                <div class="site-data-tip">
+                  <div class="increase text-white">
+                    INCREASE
+                    <span class="text-green">500</span>
+                    VIEWS
+                  </div>
+                  <div class="lastweek text-gray">last week: 21,333</div>
+                </div>
+
+              </span>
+            </div>
+          </div>
+
+          <div class="siterecord d-flex justify-content-between align-items-center pb-3">
+            <div>
+              <i class="fab fa-wordpress align-middle mr-2" style="font-size: 3rem"></i>
+              <span class="text-secondary">wordpress.com</span>
+            </div>
+            <div>
+              <span class="h5 mr-2">2,489</span>
+              <span class="site-data">
+                <i class="fas fa-arrow-down text-red"></i>
+                <span class="text-red">15%</span>
+                <div class="site-data-tip">
+                  <div class="increase text-white">
+                    DECREASE
+                    <span class="text-red">489</span>
+                    VIEWS
+                  </div>
+                  <div class="lastweek text-gray">last week: 2,600</div>
+                </div>
+
+              </span>
+            </div>
+          </div>
+
+          <div class="siterecord d-flex justify-content-between align-items-center pb-3">
+            <div>
+              <i class="fab fa-medium align-middle mr-2" style="font-size: 3rem"></i>
+              <span class="text-secondary">medium.com</span>
+            </div>
+            <div>
+              <span class="h5 mr-2">1,057</span>
+              <span class="site-data">
+                <i class="fas fa-arrow-down text-red"></i>
+                <span class="text-red">30%</span>
+                <div class="site-data-tip">
+                  <div class="increase text-white">
+                    DECREASE
+                    <span class="text-red">2,069</span>
+                    VIEWS
+                  </div>
+                  <div class="lastweek text-gray">last week: 3,086</div>
+                </div>
+
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- orders -->
+    <div class="col-md-6 mb-3">
+      <div class="card h-100">
+        <div class="card-title ml-4 mt-4 h3 ">Latest Order</div>
+        <div class="card-body">
+
+          <div class="order row mb-3">
+            <div class="col-3">
+              <img class="img-cover w-100"
+                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+                alt="">
+            </div>
+            <div class="col-6 align-self-center">
+              <div class="order-name h5">Vintage T-shirt</div>
+              <div class="order-time text-secondary">
+                <i class="fas fa-clock"></i>
+                2018/06/13 13:42
+              </div>
+              <div class="order-bywho text-secondary">
+                <i class="fas fa-user-alt"></i>
+                Belle Willis
+              </div>
+            </div>
+            <div class="col-3 align-self-end text-right">
+              <div>Total</div>
+              <div class="h4">3,200</div>
+            </div>
+          </div>
+
+          <div class="order row mb-3">
+            <div class="col-3">
+              <img class="img-cover w-100"
+                src="https://images.unsplash.com/photo-1521043330514-61d46d71684c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
+                alt="">
+            </div>
+            <div class="col-6 align-self-center">
+              <div class="order-name h5">Gray T-shirt</div>
+              <div class="order-time text-secondary">
+                <i class="fas fa-clock"></i>
+                2018/06/13 13:42
+              </div>
+              <div class="order-bywho text-secondary">
+                <i class="fas fa-user-alt"></i>
+                Belle Willis
+              </div>
+            </div>
+            <div class="col-3 align-self-end text-right">
+              <div>Total</div>
+              <div class="h4">2,800</div>
+            </div>
+          </div>
+
+          <div class="order row ">
+            <div class="col-3">
+              <img class="img-cover w-100"
+                src="https://images.unsplash.com/photo-1524148327109-98933ca00d2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+                alt="">
+            </div>
+            <div class="col-6 align-self-center">
+              <div class="order-name h5">Pink T-shirt</div>
+              <div class="order-time text-secondary">
+                <i class="fas fa-clock"></i>
+                2018/06/13 13:42
+              </div>
+              <div class="order-bywho text-secondary">
+                <i class="fas fa-user-alt"></i>
+                Belle Willis
+              </div>
+            </div>
+            <div class="col-3 align-self-end text-right">
+              <div>Total</div>
+              <div class="h4">1,600</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script>
+  // chart
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2014', '2015', '2016', '2017', '2018', '2019'],
+      datasets: [{
+        label: 'REVENUE',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+        ],
+        borderWidth: 3,
+        fill: false,
+      }, {
+        label: 'COST',
+        data: [6, 13, 5, 16, 4, 20],
+        backgroundColor: [
+          'rgba(132, 99, 255, 0.2)',
+        ],
+        borderColor: [
+          'rgba(132, 99, 255, 1)',
+        ],
+        borderWidth: 3,
+        fill: false,
+      }, {
+        label: 'INCOME',
+        data: [18, 33, 25, 17, 6, 11],
+        backgroundColor: [
+          'rgba(132, 255, 98, 0.2)',
+        ],
+        borderColor: [
+          'rgba(132, 255, 98, 1)',
+        ],
+        borderWidth: 3,
+        fill: false,
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+
+  const select = document.querySelector('.home-select-week')
+  const selectData = {
+    Daily: [
+      [1,2,3,4,5,6],
+      [2,3,43,14,35,46],
+      [13,26,32,45,51,63]
+    ],
+    Weekly: [
+      [13,24,35,41,35,64],
+      [51,32,53,14,35,61],
+      [11,52,33,24,55,67]
+    ],
+    Monthly: [
+      [13,72,36,42,54,64],
+      [51,12,32,14,55,76],
+      [12,24,38,44,56,26]
+    ],
+    Yearly: [
+      [11,42,63,43,52,65],
+      [15,22,33,45,51,62],
+      [14,22,32,45,51,62]
+    ]
+  }
+  const sinceto = {
+    Daily: ['2018/06/12', '2018/06/13'],
+    Weekly: ['2018/06/06', '2018/06/13'],
+    Monthly: ['2018/05/13', '2018/06/13'],
+    Yearly: ['2017/06/13', '2018/06/13']
+  }
+
+  select.addEventListener('click', function(e){
+    let selected = e.target.textContent // 點選到的選項
+    const selection = document.querySelector('.home-select-week a')
+    selection.textContent = selected
+
+    let since = document.querySelector('#since')
+    let to = document.querySelector('#to')
+
+    since.textContent = sinceto[selected][0]
+    to.textContent = sinceto[selected][1]
+
+    // 更新圖表資料
+    selectData[selected].forEach((item, i, arr)=>{
+      myChart.data.datasets[i].data = selectData[selected][i]
+    })
+    myChart.update()
+  }, false)
+
+</script>
+
+  <!-- footer -->
+  <footer class="container-fluid py-3 bg-info text-center">
+    <div class="text-white mb-2">
+      網站後台
+    </div>
+    <div>
+      <a class="text-warning"
+        href="https://hexschool.github.io/THE_F2E_Design/week3-admin%20order/#artboard0">設計稿來源：精神時光屋</a>
+    </div>
+  </footer>
+  <!-- footer END -->
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/all.js"></script>
+</body>
+
+</html>

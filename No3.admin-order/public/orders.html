@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    後台訂單
+  </title>
+  <meta property="og:title" content="後台訂單 " />
+  <meta property="og:description" content="網站後台" />
+  <meta property="og:site_name" content=" 網站後台 " />
+  <meta property="og:locale" content="zh_TW" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="icon" href="./images/logo-dark.png">
+  <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Shoptime</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./orders.html">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./product.html">Product</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <a href="#" style="text-decoration: none;">Admin</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  
+<main class="container main">
+  <!-- select -->
+  <div class="d-flex justify-content-between mt-3 mb-2">
+    <div class="select">
+      <i class="far fa-square"></i>
+      <i class="fas fa-sort-down align-text-top"></i>
+      <div class="select-menu">
+        <div class="select-option">Select All</div>
+        <div class="select-option">Unselect All</div>
+        <div class="select-option">Paid</div>
+        <div class="select-option">Unpaid</div>
+        <div class="select-option">Shipping</div>
+        <div class="select-option">Done</div>
+      </div>
+    </div>
+    <div class="select">
+      <span>EDIT SECTION</span>
+      <i class="fas fa-sort-down align-text-top"></i>
+      <div class="select-menu section">
+        <!-- <div>
+          <i class="far fa-square"></i>Order ID
+        </div> -->
+        <div>
+          <i class="fas fa-check-square"></i>Customer
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Product List
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Total
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Add to Cart
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Check-out
+        </div>
+        <div>
+          <i class="fas fa-check-square"></i>Address
+        </div>
+        <!-- <div>
+          <i class="far fa-square"></i>Phone
+        </div>
+        <div>
+          <i class="far fa-square"></i>Email
+        </div> -->
+        <div>
+          <i class="fas fa-check-square"></i>Status
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- table -->
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="bg-white border-0">
+        <th>Customer</th>
+        <th>Product List</th>
+        <th>Total</th>
+        <th>Add to Cart</th>
+        <th>Check-out</th>
+        <th>Address</th>
+        <th>Status</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td cstmer>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            Ian Medina
+          </td>
+          <td pdctlist>
+            <div class="detail mb-2">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+
+          </td>
+          <td total>$2,200 </td>
+          <td add2cart>2018/6/8 13:39 </td>
+          <td checkoutout>2018/6/8 13:39 </td>
+          <td address>386 Windler Drives Apt. 358 </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-green">
+                PAID
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Paid</div>
+                <div>Unpaid</div>
+                <div>Shipping</div>
+                <div>Done</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cstmer>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            Ian Medina
+          </td>
+          <td pdctlist>
+            <div class="detail mb-2">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+
+          </td>
+          <td total>$2,200 </td>
+          <td add2cart>2018/6/8 13:39 </td>
+          <td checkoutout>2018/6/8 13:39 </td>
+          <td address>386 Windler Drives Apt. 358 </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-orange">
+                SHIPPING
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Paid</div>
+                <div>Unpaid</div>
+                <div>Shipping</div>
+                <div>Done</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td cstmer>
+            <label for="">
+              <i class="far fa-square"></i>
+            </label>
+            Ian Medina
+          </td>
+          <td pdctlist>
+            <div class="detail mb-2">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div>Vestibulum</div>
+              <div class="d-flex justify-content-between">
+                <div class="text-secondary">1,400</div>
+                <div>1</div>
+              </div>
+            </div>
+
+          </td>
+          <td total>$2,200 </td>
+          <td add2cart>2018/6/8 13:39 </td>
+          <td checkoutout>2018/6/8 13:39 </td>
+          <td address>386 Windler Drives Apt. 358 </td>
+          <td status>
+            <div class="select">
+              <button class="btn btn-blue">
+                DONE
+                <i class="fas fa-sort-down align-text-top"></i>
+              </button>
+              <div class="select-menu">
+                <div>Paid</div>
+                <div>Unpaid</div>
+                <div>Shipping</div>
+                <div>Done</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- navigation -->
+  <nav>
+    <ul class="pagination justify-content-end bg-bray">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</main>
+
+<div class="test"></div>
+
+<script>
+
+  let datas = [
+    {
+      customer: 'Amy',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Paid',
+      checked: false
+    },
+    {
+      customer: 'John',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Shipping',
+      checked: false
+    },
+    {
+      customer: 'John',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        },
+        {
+          name: 'hat',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Done',
+      checked: true
+    },
+    {
+      customer: 'John',
+      productlist: [
+        {
+          name: 'T-shirt',
+          price: 1400,
+          num: 1
+        },
+        {
+          name: 'pants',
+          price: 1200,
+          num: 1
+        }
+      ],
+      total: 2200,
+      addcarttime: '2018/06/08 13:39',
+      checkouttime: '2018/06/08 16:39',
+      address: '386 Windeler Drives Apt. 658',
+      status: 'Unpaid',
+      checked: true
+    },
+  ]
+  let btnColor = {
+    Paid: 'btn-green',
+    Shipping: 'btn-orange',
+    Done: 'btn-blue',
+    Uppaid: 'btn-secondary'
+  }
+
+  function render(datas) {
+
+    let totalStr = ''
+
+    datas.forEach((data, i, datas) => {
+
+      // productlist
+      let tdPdctlist = ''
+      data.productlist.forEach((product, j, data) => {
+        let temp = `
+        <div class="detail mb-2">
+          <div>${product.name}</div>
+          <div class="d-flex justify-content-between">
+            <div class="text-secondary">${product.price}</div>
+            <div>${product.num}</div>
+          </div>
+        </div>
+        `
+        tdPdctlist += temp
+      })
+
+      // table row
+      let trStr = function () {
+        return `
+    <tr>
+      <td cstmer>
+        <label for="">
+          <i class="far fa-${data.checked ? 'check-' : ""}square checked"></i>
+        </label>
+        ${data.customer}
+      </td>
+      <td pdctlist>
+        ${tdPdctlist}
+      </td>
+      <td total>${data.total} </td>
+      <td add2cart>${data.addcarttime} </td>
+      <td checkoutout>${data.checkouttime} </td>
+      <td address>${data.address} </td>
+      <td status class="status">
+        <div class="select">
+          <button class="btn ${btnColor[data.status]}">
+            ${data.status}
+            <i class="fas fa-sort-down align-text-top"></i>
+          </button>
+          <div class="select-menu">
+            <div>Paid</div>
+            <div>Unpaid</div>
+            <div>Shipping</div>
+            <div>Done</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    `
+      }()
+
+      totalStr += trStr
+    })
+
+
+    document.querySelector('tbody').innerHTML = totalStr
+  }
+
+  // 初始化
+  render(datas)
+
+  // 勾選判斷
+  document.querySelector('table').addEventListener('click', (e) => {
+    var el = e.target
+    var tr = el.parentElement.parentElement.parentElement
+
+    // 是否點擊到勾選框
+    if (el.className.split(" ")[2] == 'checked') {
+      var index = [].indexOf.call(tr.parentElement.children, tr)
+      datas[index].checked = !datas[index].checked
+    }
+
+    render(datas)
+  })
+
+  // 勾選篩選
+  document.querySelector('.select-menu').addEventListener('click', (e) => {
+
+    let text = e.target.textContent
+    let filterData = datas
+
+    if (text == 'Select All') datas.forEach(data => data.checked = true)
+    if (text == 'Unselect All') datas.forEach(data => data.checked = false)
+
+    if (text == 'Paid') filterData = datas.filter(data => data.status == "Paid")
+    if (text == 'Unpaid') filterData = datas.filter(data => data.status == "Unpaid")
+    if (text == 'Shipping') filterData = datas.filter(data => data.status == "Shipping")
+    if (text == 'Done') filterData = datas.filter(data => data.status == "Done")
+
+    render(filterData)
+  })
+
+  // 修改狀態
+  document.querySelector('tbody').addEventListener('click', (e) => {
+    let statusDiv = e.target
+    let tbody = document.querySelector('tbody')
+  
+    if (e.target.textContent == 'Paid' || 
+        e.target.textContent =='Unpaid' || 
+        e.target.textContent =='Shipping' ||
+        e.target.textContent == 'Done') {
+
+      let tr = e.target.parentElement.parentElement.parentElement.parentElement
+      var index = [].indexOf.call(tbody.children, tr)
+      datas[index].status = e.target.textContent
+
+      render(datas)
+    }
+
+  })
+
+  // 欄位篩選
+  let sectionData = {
+    'Customer': true,
+    'Product List': true,
+    'Total': true,
+    'Add to Cart': true,
+    'Check-out': true,
+    'Address': true,
+    'Status': true
+  }
+  document.querySelector('.section').addEventListener('click', (e) => {
+    let text = e.target.textContent.trim()
+    let icon = e.target.querySelector('i')
+
+    // 切換勾選狀態
+    sectionData[text] = !sectionData[text]
+    icon.classList.toggle('fa-check-square')
+    icon.classList.toggle('fa-square')
+
+    var index = [].indexOf.call(e.target.parentElement.children, e.target)
+    // datas[index].checked = !datas[index].checked
+    console.log(index)
+
+    // 隱藏欄位
+    document.querySelectorAll('thead tr th')[index].classList.toggle('d-none')
+    document.querySelectorAll('tbody tr').forEach(tr => {
+      tr.children[index].classList.toggle('d-none')
+    })
+  })
+
+</script>
+
+  <!-- footer -->
+  <footer class="container-fluid py-3 bg-info text-center">
+    <div class="text-white mb-2">
+      網站後台
+    </div>
+    <div>
+      <a class="text-warning"
+        href="https://hexschool.github.io/THE_F2E_Design/week3-admin%20order/#artboard0">設計稿來源：精神時光屋</a>
+    </div>
+  </footer>
+  <!-- footer END -->
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/all.js"></script>
+</body>
+
+</html>
